@@ -1,6 +1,6 @@
 const contenedorCard = document.getElementById('cardContainer')
 
-tempData.map((pelicula) => {
+const renderizado = (pelicula) => {
     const cardDiv = document.createElement('div')
     cardDiv.classList.add('card')
 
@@ -16,7 +16,17 @@ tempData.map((pelicula) => {
 
     cardDiv.classList.add('gato')
 
-})
+}
+
+
+
+
+
+$.get("https://students-api.up.railway.app/movies",(data)=> data.map(renderizado)).fail(() =>alert(`error al traer las peliculas`));
+
+
+
+
 
 
 
