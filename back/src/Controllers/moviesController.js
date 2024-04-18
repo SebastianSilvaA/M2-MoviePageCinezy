@@ -1,9 +1,9 @@
- const objetoFunciones = require("../Service/moviesService")
+const {obtener} = require('../Service/moviesService')
 
 const moviesController = async (req, res) => {
-    const obtener = await objetoFunciones.obtener()
+    const obtenerpeli = await obtener()
     try {
-        res.status(200).json(obtener)
+        res.status(200).json(obtenerpeli)
         
         
     } catch (error) {
