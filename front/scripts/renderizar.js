@@ -1,20 +1,29 @@
-const contenedorCard = document.getElementById('cardContainer')
+const contenedorCard = document.querySelector('.cartas')
 
 const renderizado = (pelicula) => {
-    const cardDiv = document.createElement('div')
-    cardDiv.classList.add('card')
+    const carta = document.querySelector(".carta")
 
-    cardDiv.innerHTML = `<h3> ${pelicula.title} </h1>
-     <p>año: ${pelicula.year} </p>
-    <p>directo: ${pelicula.director} </p>
-    <h1>duracion: ${pelicula.duration} </p>
-    <p>calificacion: ${pelicula.rate} </p>
-    <img src = '${pelicula.poster}'>
-    <p>Genre: ${pelicula.genre}</p>`
+    const desc = document.querySelector(".carta-desc")
+
+    desc.innerHTML = ` <p> ano: ${pelicula.year} <br>  director: ${pelicula.director} ${pelicula.title}
+    año: ${pelicula.year}
+   directo: ${pelicula.director}
+   duracion: ${pelicula.duration} 
+   calificacion: ${pelicula.rate}
+`
+
     
-    contenedorCard.appendChild(cardDiv)
+    carta.innerHTML = `
+    <img src = '${pelicula.poster}'> <p>`
+    
 
-    cardDiv.classList.add('gato')
+    contenedorCard.appendChild(carta)
+    
+    carta.appendChild(desc)
+    
+   
+
+    
 
 }
 

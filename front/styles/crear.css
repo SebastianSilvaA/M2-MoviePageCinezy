@@ -1,0 +1,63 @@
+header {
+    background-color: white;
+    padding: 1rem;
+    margin: 2rem;
+    margin-bottom: 0;
+    position: relative;
+    border: solid;
+    border-radius: 0.3rem;
+}
+
+body {
+    background-color: rgb(18, 28, 47);
+}
+
+.titulo1 {
+display: flex;
+align-items: center;
+font-family: "Russo One", sans-serif;
+font-size: 1.5rem;
+padding-left: 3rem;
+
+
+}
+
+.nav-class {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    position: absolute; 
+    bottom: 0;
+    right: 0;
+}
+
+
+.nav-class ul {
+    list-style-type: none; 
+    padding-left: 5rem;  
+    display: flex;
+}
+
+.nav-class li {
+    display: inline;
+    padding: 1rem;
+}
+
+.nav-class a {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 0.9rem;
+    color: black;
+    transition: color 0.5s;
+}
+
+.nav-class a:hover {
+     color: red;
+}
+
+
+.formulario {
+    background-color: beige;
+}
+
+
+

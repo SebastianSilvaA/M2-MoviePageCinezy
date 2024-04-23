@@ -1,4 +1,5 @@
 const axios = require('axios')
+const { movieModel } = require("../Models/movies.js")
 
 class Movie {
     constructor({title, year, director, duration, genre, rate, poster}) {
@@ -20,11 +21,12 @@ class Movie {
 module.exports = {
     obtener: async () => {
         try {
-           const response = await axios.get("https://students-api.up.railway.app/movies");
-           return response.data.map(movie => new Movie(movie))
+           const response = await movieModel.find();
+           return response.map(movie => new Movie(movie))
            
         } catch (error) {
             console.log(error.message)
+            throw Error
         }
      }
 }
