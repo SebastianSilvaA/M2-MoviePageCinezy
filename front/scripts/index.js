@@ -56,12 +56,15 @@ const validates = async () => {
             return false;
         }
     } catch (error) {
-        console.error("Error al realizar la solicitud:", error);
-        alert("Hubo un error al intentar crear la película.");
+        if (error.response.status === 400) {
+            alert("Error de validación: Por favor, asegúrate de que los datos ingresados sean correctos.");
+        } else {
+            console.error("Error al realizar la solicitud:", error);
+            alert("Hubo un error al intentar crear la película.");
+        }
         return false;
     }
 };
-
 
 const submitButton = document.getElementById("submit");
 
@@ -69,43 +72,8 @@ submitButton.addEventListener("click", async (event) => {
     event.preventDefault(); 
 
     if (await validates()) {
-        console.log("Pelicula creada!");
+        console.log("Película creada exitosamente.");
+    } else {
+        console.log("Hubo un error al crear la película.");
     }
 });
-
-
-
-
-const borrar = () => {
-    const title = document.getElementById("title-input")
-    const year = document.getElementById("year-input")
-    const director = document.getElementById("director-input")
-    const duration = document.getElementById("duration-input")
-    const rate = document.getElementById("rate-input")
-    const poster = document.getElementById("poster-input")
-    const adventure = document.getElementById("adventure")
-    const fantasy = document.getElementById("fantasy")
-    const comedy = document.getElementById("comedy")
-    const sci = document.getElementById("sci-fi")
-
-
-
-    title.value = "";
-    year.value = "";
-    director.value = "";
-    duration.value = "";
-    rate.value = "";
-    poster.value = "";
-    adventure.checked = false;
-    fantasy.checked = false;
-    comedy.checked = false;
-    sci.checked = false;
-} 
-
-const empty = document.getElementById("empty")
-
-empty?.addEventListener("click", (event) => {
-      event.preventDefault();
-      borrar()
-})
-

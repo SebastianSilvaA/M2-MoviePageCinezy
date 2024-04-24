@@ -52,7 +52,7 @@
                           </div>
 
                           <div class="col-md-12">
-                              <input class="form-control" type="text" name="year" placeholder="Year" id="year-input" required>
+                              <input class="form-control" type="text" name="year" placeholder="Year" id="year-input" min="1800" max="2024" required>
                                <div class="valid-feedback">Year field is valid!</div>
                                <div class="invalid-feedback">Year field cannot be blank!</div>
                           </div>
@@ -70,7 +70,7 @@
                         
 
                          <div class="col-md-12">
-                            <input class="form-control" type="text" name="rate" placeholder="Rate" id="rate-input" required>
+                            <input class="form-control" type="text" name="rate" step="0.1" min="1" max="10" placeholder="Rate" id="rate-input" required>
                              <div class="valid-feedback">Rate field is valid!</div>
                              <div class="invalid-feedback">Rate field cannot be blank!</div>
                          </div>
