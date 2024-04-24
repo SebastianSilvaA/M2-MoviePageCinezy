@@ -36,28 +36,97 @@
             </ul>
           </nav>
     </header>
-    <div class="container formulario">
-        <form class="text-center">
-          <div class="row">
-            <div class="col-sm-6 offset-sm-3">
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <div class="form-body">
+      <div class="row">
+          <div class="form-holder">
+              <div class="form-content">
+                  <div class="form-items">
+                      <h3>Create Movie</h3>
+                      <p>Fill in the data below.</p>
+                      <form class="requires-validation" novalidate>
+
+                          <div class="col-md-12">
+                             <input class="form-control" type="text" name="title" placeholder="Title" id="title-input" required>
+                             <div class="valid-feedback">Title field is valid!</div>
+                             <div class="invalid-feedback">Title field cannot be blank!</div>
+                          </div>
+
+                          <div class="col-md-12">
+                              <input class="form-control" type="text" name="year" placeholder="Year" id="year-input" required>
+                               <div class="valid-feedback">Year field is valid!</div>
+                               <div class="invalid-feedback">Year field cannot be blank!</div>
+                          </div>
+                          <div class="col-md-12">
+                              <input class="form-control" type="text" name="director" placeholder="Director" id="director-input" required>
+                               <div class="valid-feedback">Director field is valid!</div>
+                               <div class="invalid-feedback">Director field cannot be blank!</div>
+                          </div>
+                          <div class="col-md-12">
+                              <input class="form-control" type="text" name="duration" placeholder="Duration" id="duration-input" required>
+                               <div class="valid-feedback">Duration field is valid!</div>
+                               <div class="invalid-feedback">Duration field cannot be blank!</div>
+                          </div>
+
+                        
+
+                         <div class="col-md-12">
+                            <input class="form-control" type="text" name="rate" placeholder="Rate" id="rate-input" required>
+                             <div class="valid-feedback">Rate field is valid!</div>
+                             <div class="invalid-feedback">Rate field cannot be blank!</div>
+                         </div>
+
+                         <div class="col-md-12">
+                            <input class="form-control" type="url" name="poster" placeholder="Poster" id="poster-input" required>
+                             <div class="valid-feedback">Poster field is valid!</div>
+                             <div class="invalid-feedback">Poster field cannot be blank!</div>
+                         </div>
+
+                         <section class="container d-flex">
+                             
+                             <div class="form-check m-3">
+                               <input class="form-check-input" type="checkbox" value="" id="adventure" required>
+                               <label class="form-check-label">Adventure</label>
+                              <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+                             </div>
+                             <div class="form-check m-3">
+                               <input class="form-check-input" type="checkbox" value="" id="fantasy" required>
+                               <label class="form-check-label">Fantasy</label>
+                              <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+                             </div>
+                             <div class="form-check m-3">
+                               <input class="form-check-input" type="checkbox" value="" id="comedy" required>
+                               <label class="form-check-label">Comedy</label>
+                              <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+                             </div>
+                             <div class="form-check m-3">
+                               <input class="form-check-input" type="checkbox" value="" id="sci-fi" required>
+                               <label class="form-check-label">Sci-fi</label>
+                              <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+                             </div>
+
+                         </section>
+
+
+                
+                         <section class="container d-flex justify-content-between">
+
+                             <div class="form-button mt-3">
+                                 <button id="empty" type="submit" class="btn btn-primary">Empty</button>
+                             </div>
+   
+                             <div class="form-button mt-3">
+                                 <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                                 
+                             </div>
+                         </section>
+                      </form>
+                  </div>
               </div>
-              <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-              </div>
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
           </div>
-        </form>
       </div>
+  </div>
+
+  <script src="../scripts/verificationInputs.js"></script>
       
 </body>
 </html>

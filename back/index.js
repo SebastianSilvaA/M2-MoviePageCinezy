@@ -15,15 +15,3 @@ Dbconnect()
     console.log("algo salio mal", error)
 }) 
 
-/*const serverUp = async () => {
-    try {
-       await Dbconnect()
-       app.listen(PORT,() => console.log("funciona"))
-
-    } catch (error) {
-        console.log("algo salio mal", error)
-        
-    }
-}
-
-serverUp() */
