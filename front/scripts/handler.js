@@ -17,3 +17,7 @@ const renderizarTarjeta = require("./renderizar");
 
 
 module.exports = obtener
+
+
+ 
+ 
