@@ -5,6 +5,7 @@ const schema = {
   title: String,
   year: Number,
   director: String,
+  duration: String,
   genre: Array,
   rate: Number,
   poster: String

@@ -139,6 +139,7 @@ padding-left: 3rem;
    
 
 .cartas {
+    
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -164,6 +165,7 @@ padding-left: 3rem;
   }
   
   .carta img {
+    max-width: 300px;
     width: 100%;
     height: 98%;
     object-fit: cover;
@@ -172,21 +174,27 @@ padding-left: 3rem;
   }
   
   .carta-desc {
+    max-width: 100%;
+    width: 100%;
     display: block;
-    font-size: 1.2rem;
+    font-size: 1rem;
     position: absolute;
-    height: 0;
+    height: auto;
     top: 0;
     opacity: 0;
     padding: 18px 8%;
     background-color: white;
     overflow-y: scroll;
     transition: 0.8s ease;
+    box-sizing: border-box;
+
+    
   }
   
   .carta:hover .carta-desc {
     opacity: 1;
     height: 100%;
+    
   }
   
   
@@ -198,3 +206,5 @@ padding-left: 3rem;
     margin: 1.25rem; 
   }
   
+
+ 

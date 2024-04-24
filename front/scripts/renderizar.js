@@ -1,31 +1,29 @@
 const contenedorCard = document.querySelector('.cartas')
 
-const renderizado = (pelicula) => {
-    const carta = document.querySelector(".carta")
+const renderizarTarjeta = (pelicula) => {
+    const carta = document.createElement('div');
+    carta.classList.add('carta', 'col'); 
 
-    const desc = document.querySelector(".carta-desc")
+    const imagen = document.createElement('img');
+    imagen.src = pelicula.poster;
+    imagen.alt = pelicula.title;
 
-    desc.innerHTML = ` <p> ano: ${pelicula.year} <br>  director: ${pelicula.director} ${pelicula.title}
-    año: ${pelicula.year}
-   directo: ${pelicula.director}
-   duracion: ${pelicula.duration} 
-   calificacion: ${pelicula.rate}
-`
+    const desc = document.createElement('p');
+    desc.classList.add('carta-desc');
+    desc.innerHTML = `
+        <strong>${pelicula.title}</strong><br><br>
+        Año: ${pelicula.year}<br><br> 
+        Director: ${pelicula.director}<br><br> 
+        Duración: ${pelicula.duration}<br><br> 
+        Calificación: ${pelicula.rate}<br><br>
+        Genero: ${pelicula.genre}
+       
+    `;
 
-    
-    carta.innerHTML = `
-    <img src = '${pelicula.poster}'> <p>`
-    
-
-    contenedorCard.appendChild(carta)
-    
-    carta.appendChild(desc)
-    
    
+    carta.appendChild(imagen);
+    carta.appendChild(desc);
+    contenedorCard.appendChild(carta);
+};
 
-    
-
-}
-
-
-module.exports = renderizado
+module.exports = renderizarTarjeta;

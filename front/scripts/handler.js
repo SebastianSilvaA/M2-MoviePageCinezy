@@ -1,5 +1,5 @@
 const axios = require("axios")
-const renderizado = require("./renderizar");
+const renderizarTarjeta = require("./renderizar");
 
 
 
@@ -9,7 +9,7 @@ const renderizado = require("./renderizar");
     try {
        const response = await axios.get("http://localhost:3000/movies/");
        const data = response.data
-       data.map(renderizado)
+       data.map(renderizarTarjeta)
     } catch (error) {
         console.log(error.message)
     }

@@ -24,9 +24,9 @@ const enviarBD = async (title, year, director, duration, genre, rate, poster) =>
     try {
         const newMovie  = await new movieModel({
          title: title,
-         year: year ,
+         year: year,
+         duration: duration ,
          director: director,
-         duration: duration,
          genre: genre,
          rate: rate,
          poster: poster
